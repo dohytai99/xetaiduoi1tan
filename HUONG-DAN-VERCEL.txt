@@ -16,3 +16,9 @@ Cách B — CLI
 cd thư mục dự án → vercel → (lần sau) vercel --prod
 
 Ghi chú: Cài đặt → Domains trên Vercel khi gắn tên miền riêng.
+
+Web Analytics (không thấy dữ liệu?)
+-------------------------------
+- Trong Vercel: Project → Analytics → bật **Enable** (sau đó deploy lại).
+- Đường dẫn `/_vercel/insights/script.js` chỉ do **Vercel** phục vụ. Nếu site chỉ nằm trên **GitHub Pages** / mở file `file://` / host khác → script 404, dashboard Vercel **không** có pageview.
+- Kiểm tra: mở site bằng URL **xxx.vercel.app** (hoặc domain đã trỏ DNS về Vercel), F12 → Network → tải được `script.js` và không bị extension chặn.
