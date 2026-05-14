@@ -1,0 +1,18 @@
+ĐƯA SITE TĨNH LÊN VERCEL
+=======================
+
+Thư mục có index.html ở gốc — Vercel nhận là site tĩnh (HTML + CSS).
+
+Cách A — Qua web
+----------------
+1. https://vercel.com → đăng nhập.
+2. Add New… → Project → Import Git Repository (push repo lên GitHub trước).
+3. Framework: **Other** — Root: gốc repo.
+4. Build / Output: **để trống**.
+5. Deploy → mở URL xxx.vercel.app.
+
+Cách B — CLI
+------------
+cd thư mục dự án → vercel → (lần sau) vercel --prod
+
+Ghi chú: Cài đặt → Domains trên Vercel khi gắn tên miền riêng.

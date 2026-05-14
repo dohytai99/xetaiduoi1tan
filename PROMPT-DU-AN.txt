@@ -1,0 +1,30 @@
+================================================================================
+PROMPT / BRIEF — DỰ ÁN xetaiduoi1tan.com (CHỈ SITE TĨNH / LANDING)
+================================================================================
+
+--------------------------------------------------------------------------------
+1) MỤC TIÊU
+--------------------------------------------------------------------------------
+- Tên miền: xetaiduoi1tan.com — chủ đề XE TẢI DƯỚI 1 TẤN.
+- Site tĩnh: HTML + CSS, nền trắng, dễ đọc; có trang tin tóm tắt, xe đang bán (khung), liên hệ.
+- Nội dung pháp lý: tin dự thảo theo báo, trích VnExpress, không khẳng định đã thành luật.
+  https://vnexpress.net/xe-tai-tren-mot-tan-co-the-bi-cam-vao-noi-do-tp-hcm-tu-6h-den-22h-5073586.html
+
+--------------------------------------------------------------------------------
+2) FILE TRONG REPO
+--------------------------------------------------------------------------------
+- index.html — landing
+- tin-tuc/gioi-han-xe-tai-noi-do-tphcm.html — bài tin
+- xe-dang-ban.html — danh sách xe (mẫu)
+- lien-he.html — liên hệ
+- styles.css — giao diện trắng
+- robots.txt, sitemap.xml
+- HUONG-DAN-VERCEL.txt — deploy Vercel (tuỳ chọn)
+- .nojekyll — GitHub Pages (tuỳ chọn)
+
+--------------------------------------------------------------------------------
+3) KHÔNG DÙNG WORDPRESS
+--------------------------------------------------------------------------------
+Toàn bộ WordPress / theme / zip đã gỡ — chỉ chỉnh file HTML/CSS.
+
+================================================================================
