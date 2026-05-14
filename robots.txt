@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Ưu tiên phiên bản www (trùng với thẻ canonical trên site)
 Sitemap: https://www.xetaiduoi1tan.com/sitemap.xml

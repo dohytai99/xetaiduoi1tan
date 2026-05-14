@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "xetaiduoi1tan.com" }],
+      "destination": "https://www.xetaiduoi1tan.com/:path*",
+      "permanent": true
+    }
+  ]
+}
