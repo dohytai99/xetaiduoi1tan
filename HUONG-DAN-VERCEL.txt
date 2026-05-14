@@ -15,7 +15,7 @@ Cách B — CLI
 ------------
 cd thư mục dự án → vercel → (lần sau) vercel --prod
 
-Ghi chú: Cài đặt → Domains trên Vercel khi gắn tên miền riêng.
+Ghi chú: Cài đặt → Domains trên Vercel khi gắn tên miền riêng. Chọn **một** domain chính (www hoặc không www) trong Domains → “Redirect to…” để tránh vòng redirect nếu vừa cấu hình Vercel vừa thêm rule trùng trong `vercel.json`.
 
 Web Analytics (không thấy dữ liệu?)
 -------------------------------
