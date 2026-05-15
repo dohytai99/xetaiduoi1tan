@@ -48,10 +48,10 @@ output/
 - [x] Build footer (Prompt 7): 3 cột (giới thiệu, sitemap, liên hệ) + dòng pháp lý
 
 **Ngày 4-5: Components & Pages**
-- [ ] Card component cho xe (Prompt 3)
-- [ ] Comparison table (Prompt 4)
-- [ ] Blog post template (Prompt 6)
-- [ ] CTA sections (Prompt 5)
+- [x] Card component cho xe (Prompt 3): `.vehicle-card`, `.vehicle-grid` + mẫu trên `xe-dang-ban.html`
+- [x] Comparison table (Prompt 4): `.compare-table` + trang `so-sanh-van-vs-xe-tai-nhe.html` + bảng rút gọn trên listing
+- [x] Blog post template (Prompt 6): `mau-bai-viet.html` (noindex) + class `.post-related`
+- [x] CTA sections (Prompt 5): `.cta-band` trên landing, `xe-dang-ban`, `so-sanh…`
 
 **Ngày 6: Interactive Features**
 - [ ] Embed tool tra cứu (file `tra_cuu_xe.html`)

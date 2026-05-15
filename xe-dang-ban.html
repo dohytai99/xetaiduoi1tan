@@ -43,6 +43,7 @@
           <a href="index.html">Trang chủ</a>
           <a href="tin-tuc/xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html">Tin TP.HCM</a>
           <a href="xe-dang-ban.html" aria-current="page">Xe đang bán</a>
+          <a href="so-sanh-van-vs-xe-tai-nhe.html">So sánh</a>
           <a href="lien-he.html">Liên hệ</a>
         </nav>
       </div>
@@ -57,15 +58,75 @@
     </nav>
 
     <h1 class="page-title">Xe đang bán</h1>
-    <p class="sub">Thêm từng tin xe (ảnh, giá, mô tả) khi bạn sẵn sàng. Hiện để khung mẫu.</p>
+    <p class="sub">Mẫu thẻ xe (component) — thay ảnh, giá, mô tả thật khi có hàng; có thể nhân bản từng <code>&lt;li&gt;</code>.</p>
 
-    <ul class="card-list">
+    <ul class="vehicle-grid">
       <li>
-        <h2>Chưa có tin</h2>
-        <p>Khi có xe, thay nội dung khối này bằng HTML (hoặc tách thành nhiều thẻ <code>&lt;li&gt;</code>).</p>
-        <a class="btn btn--line btn--sm" href="lien-he.html">Liên hệ đăng bán</a>
+        <article class="vehicle-card">
+          <div class="vehicle-card__media" aria-hidden="true">Van</div>
+          <div class="vehicle-card__body">
+            <h2 class="vehicle-card__title">Ford Transit Van (minh họa)</h2>
+            <p class="vehicle-card__meta">TP.HCM · Odo minh họa</p>
+            <p class="vehicle-card__price">Liên hệ</p>
+            <ul class="vehicle-card__specs">
+              <li>Tải trọng trên giấy: theo từng đời xe</li>
+              <li>Khoang kín, phù hợp giao nội đô nhiều điểm</li>
+            </ul>
+            <a class="btn btn--solid btn--sm" href="tel:+84900000000">Gọi xem xe</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="vehicle-card">
+          <div class="vehicle-card__media" aria-hidden="true">Tải</div>
+          <div class="vehicle-card__body">
+            <h2 class="vehicle-card__title">Xe tải thùng nhẹ &lt; 1 tấn (minh họa)</h2>
+            <p class="vehicle-card__meta">TP.HCM · Thùng mui bạt / kín tùy cấu hình</p>
+            <p class="vehicle-card__price">Liên hệ</p>
+            <ul class="vehicle-card__specs">
+              <li>Thùng tách cabin, xếp pallet thuận hơn van</li>
+              <li>Kiểm tra khung giờ nội đô theo quy định hiệu lực</li>
+            </ul>
+            <a class="btn btn--line btn--sm" href="lien-he.html">Nhắn đăng tin</a>
+          </div>
+        </article>
       </li>
     </ul>
+
+    <div class="compare-table-wrap" role="region" aria-label="So sánh nhanh van và tải nhẹ">
+      <table class="compare-table">
+        <caption>So sánh nhanh trên trang danh sách</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tiêu chí</th>
+            <th scope="col" class="col-van">Van</th>
+            <th scope="col" class="col-truck">Tải nhẹ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ưu thế chính</td>
+            <td class="col-van">Hàng nhỏ gọn, ít hở mưa nắng.</td>
+            <td class="col-truck">Thùng rộng, hàng cồng kềnh.</td>
+          </tr>
+          <tr>
+            <td>Xem chi tiết</td>
+            <td class="col-van" colspan="2"><a href="so-sanh-van-vs-xe-tai-nhe.html">Trang so sánh đầy đủ</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="cta-band" aria-label="Đăng bán">
+      <div class="cta-band__inner">
+        <h2 class="cta-band__title">Bạn có xe cần đăng?</h2>
+        <p class="cta-band__text">Chỉnh số điện thoại thật ở trang liên hệ; có thể thay nội dung thẻ xe bằng HTML tĩnh hoặc tách file theo từng tin.</p>
+        <p class="actions">
+          <a class="btn btn--solid" href="lien-he.html">Liên hệ đăng bán</a>
+          <a class="btn btn--line" href="so-sanh-van-vs-xe-tai-nhe.html">So sánh van / tải</a>
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -80,6 +141,7 @@
           <li><a href="index.html">Trang chủ</a></li>
           <li><a href="tin-tuc/xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html">Tin TP.HCM</a></li>
           <li><a href="tin-tuc/gioi-han-xe-tai-noi-do-tphcm.html">Tóm tắt tin</a></li>
+          <li><a href="so-sanh-van-vs-xe-tai-nhe.html">Van vs tải nhẹ</a></li>
           <li><a href="xe-dang-ban.html">Xe đang bán</a></li>
           <li><a href="lien-he.html">Liên hệ</a></li>
         </ul>

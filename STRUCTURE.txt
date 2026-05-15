@@ -10,7 +10,8 @@
 ├── vercel.json             # Redirect index.html → /
 ├── robots.txt
 ├── sitemap.xml
-├── tin-tuc/                # Bài tin / pillar SEO
+├── so-sanh-van-vs-xe-tai-nhe.html  # So sánh van vs xe tải nhẹ (SEO)
+├── mau-bai-viet.html              # Template bài viết (noindex — chỉ để nhân bản)
 │   ├── xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html
 │   └── gioi-han-xe-tai-noi-do-tphcm.html
 ├── roadmap_implementation.md

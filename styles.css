@@ -674,6 +674,214 @@ a:hover {
   color: var(--muted);
 }
 
+/* Vehicle cards — roadmap Prompt 3 */
+.vehicle-grid {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .vehicle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.vehicle-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.vehicle-card__media {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(145deg, #f1f5f9 0%, #e2e8f0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: -0.03em;
+}
+
+.vehicle-card__body {
+  padding: 1.15rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.vehicle-card__title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.vehicle-card__meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.vehicle-card__price {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.vehicle-card__specs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.88rem;
+  color: var(--muted);
+  flex: 1;
+}
+
+.vehicle-card__specs li + li {
+  margin-top: 0.3rem;
+}
+
+.vehicle-card__specs li {
+  padding-left: 0.85rem;
+  position: relative;
+}
+
+.vehicle-card__specs li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.vehicle-card .btn {
+  align-self: flex-start;
+  margin-top: 0.35rem;
+}
+
+/* Comparison table — roadmap Prompt 4 */
+.compare-table-wrap {
+  margin: 1.5rem 0 2rem;
+}
+
+table.compare-table {
+  width: 100%;
+  min-width: 300px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.compare-table caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.65rem;
+  font-size: 1rem;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid var(--line);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.compare-table thead th {
+  background: var(--paper);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.compare-table .col-van {
+  background: #eff6ff;
+}
+
+.compare-table .col-truck {
+  background: #fffbeb;
+}
+
+.compare-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* CTA band — roadmap Prompt 5 */
+.cta-band {
+  margin: 0;
+  padding: 2rem 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.cta-band__inner {
+  width: min(100% - 2rem, var(--max));
+  margin-inline: auto;
+  text-align: center;
+}
+
+.cta-band__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cta-band__text {
+  margin: 0 auto 1.15rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  max-width: 32rem;
+  line-height: 1.55;
+}
+
+.cta-band .actions {
+  margin: 0;
+  justify-content: center;
+}
+
+/* Blog article helpers — roadmap Prompt 6 */
+.post-related {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.post-related h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.post-related ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.post-related li + li {
+  margin-top: 0.35rem;
+}
+
 .grid-2 {
   display: grid;
   gap: 1rem;
