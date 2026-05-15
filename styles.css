@@ -970,3 +970,103 @@ input[type="number"], select {
 .contact-list li + li {
   margin-top: 0.5rem;
 }
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+  .form-row .form-group {
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 2.5rem;
+}
+
+.result-card {
+  display: none;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg);
+  transition: opacity 0.3s ease;
+}
+
+.result-banned {
+  background-color: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.result-allowed {
+  background-color: #f0fdf4;
+  border-color: #86efac;
+}
+
+.result-card__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.result-card__title.banned {
+  color: #b91c1c;
+}
+
+.result-card__title.allowed {
+  color: #15803d;
+}
+
+.result-card__message {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}

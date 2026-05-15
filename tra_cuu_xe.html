@@ -54,27 +54,29 @@
       <p class="meta">Kiểm tra nhanh xem xe của bạn có bị ảnh hưởng bởi dự thảo cấm xe tải TP.HCM 2026 hay không.</p>
     </div>
 
-    <div class="box slide-up" style="margin-bottom: 2rem;">
+    <div class="box slide-up" style="margin-bottom: 2.5rem; padding: 2rem;">
       <form id="check-form">
-        <div style="margin-bottom: 1rem;">
-          <label for="vehicle-type" style="display:block; font-weight: 600; margin-bottom: 0.5rem;">Loại xe của bạn:</label>
-          <select id="vehicle-type" style="width: 100%; padding: 0.65rem; border-radius: var(--radius); border: 1px solid var(--line); font-family: inherit; font-size: 1rem;">
-            <option value="truck">Xe tải thùng</option>
-            <option value="van">Xe tải Van</option>
-            <option value="pickup">Xe bán tải (Pickup)</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vehicle-type" class="form-label">Loại xe của bạn:</label>
+            <select id="vehicle-type" class="form-control">
+              <option value="truck">Xe tải thùng</option>
+              <option value="van">Xe tải Van</option>
+              <option value="pickup">Xe bán tải (Pickup)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="vehicle-weight" class="form-label">Khối lượng chuyên chở (kg):</label>
+            <input type="number" id="vehicle-weight" class="form-control" placeholder="VD: 950, 1500..." required />
+          </div>
         </div>
-        <div style="margin-bottom: 1.5rem;">
-          <label for="vehicle-weight" style="display:block; font-weight: 600; margin-bottom: 0.5rem;">Khối lượng chuyên chở (ghi trên giấy đăng kiểm - kg):</label>
-          <input type="number" id="vehicle-weight" placeholder="VD: 950, 1500..." required style="width: 100%; padding: 0.65rem; border-radius: var(--radius); border: 1px solid var(--line); font-family: inherit; font-size: 1rem;" />
-        </div>
-        <button type="submit" class="btn btn--solid" style="width: 100%; padding: 0.8rem; font-size: 1.05rem;">Tra cứu kết quả</button>
+        <button type="submit" class="btn btn--solid" style="width: 100%; padding: 0.85rem; font-size: 1.05rem; justify-content: center;">Tra cứu kết quả</button>
       </form>
 
-      <div id="result-box" style="display: none; margin-top: 1.5rem; padding: 1rem; border-radius: var(--radius); border: 1px solid var(--line);">
-        <h3 id="result-title" style="margin: 0 0 0.5rem;">Kết quả:</h3>
-        <p id="result-message" style="margin: 0; color: var(--text); line-height: 1.6;"></p>
-        <div class="notice" role="note" style="margin-top: 1rem;">
+      <div id="result-box" class="result-card">
+        <h3 id="result-title" class="result-card__title">Kết quả:</h3>
+        <p id="result-message" class="result-card__message"></p>
+        <div class="notice" role="note" style="margin-top: 1.5rem; margin-bottom: 0;">
           <strong>Lưu ý:</strong> Kết quả chỉ mang tính tham khảo dựa trên thông tin dự thảo báo chí đưa. Quy định thực tế có thể thay đổi khi văn bản chính thức được ban hành.
         </div>
       </div>
@@ -141,27 +143,23 @@
           if (weight >= 1000) {
             isBanned = true;
             msg = `Xe tải thùng có khối lượng chuyên chở <strong>${weight}kg</strong> (≥ 1000kg) sẽ <strong>bị cấm</strong> vào nội đô TP.HCM từ 6h-22h theo dự thảo mới.`;
-            resultBox.style.backgroundColor = '#fef2f2';
-            resultBox.style.borderColor = '#fca5a5';
-            resultTitle.style.color = '#b91c1c';
+            resultBox.className = 'result-card result-banned';
+            resultTitle.className = 'result-card__title banned';
           } else {
             msg = `Xe tải thùng có khối lượng chuyên chở <strong>${weight}kg</strong> (< 1000kg) <strong>được phép</strong> lưu thông vào nội đô bình thường. Tuy nhiên cần chú ý các biển báo cấm tải trên từng tuyến đường cụ thể.`;
-            resultBox.style.backgroundColor = '#f0fdf4';
-            resultBox.style.borderColor = '#86efac';
-            resultTitle.style.color = '#15803d';
+            resultBox.className = 'result-card result-allowed';
+            resultTitle.className = 'result-card__title allowed';
           }
         } else if (type === 'van' || type === 'pickup') {
           if (weight >= 950) {
             isBanned = true;
             msg = `Xe Van/Bán tải có khối lượng chuyên chở <strong>${weight}kg</strong> (≥ 950kg) được xem như xe tải và sẽ <strong>bị cấm</strong> vào nội đô từ 6h-22h.`;
-            resultBox.style.backgroundColor = '#fef2f2';
-            resultBox.style.borderColor = '#fca5a5';
-            resultTitle.style.color = '#b91c1c';
+            resultBox.className = 'result-card result-banned';
+            resultTitle.className = 'result-card__title banned';
           } else {
             msg = `Xe Van/Bán tải có khối lượng chuyên chở <strong>${weight}kg</strong> (< 950kg) được xem như xe con, <strong>được phép</strong> vào phố 24/24h.`;
-            resultBox.style.backgroundColor = '#f0fdf4';
-            resultBox.style.borderColor = '#86efac';
-            resultTitle.style.color = '#15803d';
+            resultBox.className = 'result-card result-allowed';
+            resultTitle.className = 'result-card__title allowed';
           }
         }
 
