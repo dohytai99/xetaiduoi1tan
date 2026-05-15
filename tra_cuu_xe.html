@@ -54,30 +54,39 @@
       <p class="meta">Kiểm tra nhanh xem xe của bạn có bị ảnh hưởng bởi dự thảo cấm xe tải TP.HCM 2026 hay không.</p>
     </div>
 
-    <div class="box slide-up" style="margin-bottom: 2.5rem; padding: 2rem;">
+    <div class="glass-card slide-up">
       <form id="check-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="vehicle-type" class="form-label">Loại xe của bạn:</label>
-            <select id="vehicle-type" class="form-control">
-              <option value="truck">Xe tải thùng</option>
-              <option value="van">Xe tải Van</option>
-              <option value="pickup">Xe bán tải (Pickup)</option>
-            </select>
+        <div class="form-grid">
+          <div>
+            <label for="vehicle-type" class="premium-label">Loại xe của bạn</label>
+            <div style="position:relative;">
+              <select id="vehicle-type" class="premium-input" style="appearance: none; padding-right: 2.5rem;">
+                <option value="truck">🚛 Xe tải thùng</option>
+                <option value="van">🚐 Xe tải Van</option>
+                <option value="pickup">🛻 Xe bán tải (Pickup)</option>
+              </select>
+              <div style="position:absolute; right:1.2rem; top:50%; transform:translateY(-50%); pointer-events:none; opacity:0.5;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="vehicle-weight" class="form-label">Khối lượng chuyên chở (kg):</label>
-            <input type="number" id="vehicle-weight" class="form-control" placeholder="VD: 950, 1500..." required />
+          <div>
+            <label for="vehicle-weight" class="premium-label">Khối lượng chuyên chở (kg)</label>
+            <input type="number" id="vehicle-weight" class="premium-input" placeholder="VD: 950, 1500..." required />
           </div>
         </div>
-        <button type="submit" class="btn btn--solid" style="width: 100%; padding: 0.85rem; font-size: 1.05rem; justify-content: center;">Tra cứu kết quả</button>
+        <button type="submit" class="btn-premium">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          Tra cứu ngay
+        </button>
       </form>
 
-      <div id="result-box" class="result-card">
-        <h3 id="result-title" class="result-card__title">Kết quả:</h3>
-        <p id="result-message" class="result-card__message"></p>
-        <div class="notice" role="note" style="margin-top: 1.5rem; margin-bottom: 0;">
-          <strong>Lưu ý:</strong> Kết quả chỉ mang tính tham khảo dựa trên thông tin dự thảo báo chí đưa. Quy định thực tế có thể thay đổi khi văn bản chính thức được ban hành.
+      <div id="result-box" class="result-premium">
+        <h3 id="result-title" class="result-title">Kết quả</h3>
+        <p id="result-message" class="result-message"></p>
+        <div class="premium-notice" role="note">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="flex-shrink:0; color:#94a3b8;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <div><strong>Lưu ý:</strong> Kết quả chỉ mang tính tham khảo dựa trên thông tin dự thảo báo chí đưa. Quy định thực tế có thể thay đổi khi văn bản chính thức được ban hành.</div>
         </div>
       </div>
     </div>
@@ -143,28 +152,30 @@
           if (weight >= 1000) {
             isBanned = true;
             msg = `Xe tải thùng có khối lượng chuyên chở <strong>${weight}kg</strong> (≥ 1000kg) sẽ <strong>bị cấm</strong> vào nội đô TP.HCM từ 6h-22h theo dự thảo mới.`;
-            resultBox.className = 'result-card result-banned';
-            resultTitle.className = 'result-card__title banned';
+            resultBox.className = 'result-premium banned';
+            resultTitle.className = 'result-title banned';
           } else {
             msg = `Xe tải thùng có khối lượng chuyên chở <strong>${weight}kg</strong> (< 1000kg) <strong>được phép</strong> lưu thông vào nội đô bình thường. Tuy nhiên cần chú ý các biển báo cấm tải trên từng tuyến đường cụ thể.`;
-            resultBox.className = 'result-card result-allowed';
-            resultTitle.className = 'result-card__title allowed';
+            resultBox.className = 'result-premium allowed';
+            resultTitle.className = 'result-title allowed';
           }
         } else if (type === 'van' || type === 'pickup') {
           if (weight >= 950) {
             isBanned = true;
             msg = `Xe Van/Bán tải có khối lượng chuyên chở <strong>${weight}kg</strong> (≥ 950kg) được xem như xe tải và sẽ <strong>bị cấm</strong> vào nội đô từ 6h-22h.`;
-            resultBox.className = 'result-card result-banned';
-            resultTitle.className = 'result-card__title banned';
+            resultBox.className = 'result-premium banned';
+            resultTitle.className = 'result-title banned';
           } else {
             msg = `Xe Van/Bán tải có khối lượng chuyên chở <strong>${weight}kg</strong> (< 950kg) được xem như xe con, <strong>được phép</strong> vào phố 24/24h.`;
-            resultBox.className = 'result-card result-allowed';
-            resultTitle.className = 'result-card__title allowed';
+            resultBox.className = 'result-premium allowed';
+            resultTitle.className = 'result-title allowed';
           }
         }
 
         resultMessage.innerHTML = msg;
-        resultTitle.innerText = isBanned ? '❌ Hạn chế lưu thông' : '✅ Được phép lưu thông';
+        resultTitle.innerHTML = isBanned 
+          ? '<svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Hạn chế lưu thông' 
+          : '<svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Được phép lưu thông';
       });
     });
   </script>
