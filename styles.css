@@ -397,6 +397,37 @@ a:hover {
   color: var(--muted);
 }
 
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 280px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid var(--line);
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table th {
+  background: var(--paper);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.data-table td {
+  color: var(--muted);
+}
+
 /* Listing / contact */
 .page-title {
   margin: 0 0 0.5rem;
