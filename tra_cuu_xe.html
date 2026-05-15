@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Công cụ tương tác tra cứu xem xe của bạn có bị cấm vào nội đô TP.HCM theo dự thảo mới nhất 2026 hay không." />
+  <title>Công cụ tra cứu quy định cấm tải TP.HCM | xetaiduoi1tan.com</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
+  <header class="site-header">
+    <div class="inner site-header__inner">
+      <div class="brand-wrap">
+        <a class="brand" href="index.html">Xe tải <span>&lt; 1 tấn</span></a>
+        <p class="brand-tag">Tin nội đô TP.HCM · xe đang bán · liên hệ</p>
+      </div>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel">Menu</button>
+      <a class="btn btn--line btn--sm header-cta" href="tel:+84900000000">Gọi</a>
+      <div id="nav-panel" class="nav-panel">
+        <nav class="nav" aria-label="Chính">
+          <a href="index.html">Trang chủ</a>
+          <a href="tin-tuc/xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html">Tin TP.HCM</a>
+          <a href="xe-dang-ban.html">Xe đang bán</a>
+          <a href="so-sanh-van-vs-xe-tai-nhe.html">So sánh</a>
+          <a href="tra_cuu_xe.html" aria-current="page">Tra cứu xe</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-main inner inner--narrow">
+    <div class="article-head fade-in">
+      <h1>Công cụ tra cứu quy định xe tải nội đô</h1>
+      <p class="meta">Kiểm tra nhanh xem xe của bạn có bị ảnh hưởng bởi dự thảo cấm xe tải TP.HCM 2026 hay không.</p>
+    </div>
+
+    <div class="box slide-up" style="margin-bottom: 2rem;">
+      <form id="check-form">
+        <div style="margin-bottom: 1rem;">
+          <label for="vehicle-type" style="display:block; font-weight: 600; margin-bottom: 0.5rem;">Loại xe của bạn:</label>
+          <select id="vehicle-type" style="width: 100%; padding: 0.65rem; border-radius: var(--radius); border: 1px solid var(--line); font-family: inherit; font-size: 1rem;">
+            <option value="truck">Xe tải thùng</option>
+            <option value="van">Xe tải Van</option>
+            <option value="pickup">Xe bán tải (Pickup)</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <label for="vehicle-weight" style="display:block; font-weight: 600; margin-bottom: 0.5rem;">Khối lượng chuyên chở (ghi trên giấy đăng kiểm - kg):</label>
+          <input type="number" id="vehicle-weight" placeholder="VD: 950, 1500..." required style="width: 100%; padding: 0.65rem; border-radius: var(--radius); border: 1px solid var(--line); font-family: inherit; font-size: 1rem;" />
+        </div>
+        <button type="submit" class="btn btn--solid" style="width: 100%; padding: 0.8rem; font-size: 1.05rem;">Tra cứu kết quả</button>
+      </form>
+
+      <div id="result-box" style="display: none; margin-top: 1.5rem; padding: 1rem; border-radius: var(--radius); border: 1px solid var(--line);">
+        <h3 id="result-title" style="margin: 0 0 0.5rem;">Kết quả:</h3>
+        <p id="result-message" style="margin: 0; color: var(--text); line-height: 1.6;"></p>
+        <div class="notice" role="note" style="margin-top: 1rem;">
+          <strong>Lưu ý:</strong> Kết quả chỉ mang tính tham khảo dựa trên thông tin dự thảo báo chí đưa. Quy định thực tế có thể thay đổi khi văn bản chính thức được ban hành.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner footer-grid">
+      <div>
+        <p class="footer-brand"><strong>xetaiduoi1tan.com</strong></p>
+        <p class="footer-desc">Thông tin về xe tải dưới 1 tấn và tin nội đô TP.HCM — tư liệu tham khảo, không phải tư vấn pháp lý.</p>
+      </div>
+      <div>
+        <p class="footer-title">Trang</p>
+        <ul class="footer-list">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="tin-tuc/xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html">Tin TP.HCM</a></li>
+          <li><a href="so-sanh-van-vs-xe-tai-nhe.html">Van vs tải nhẹ</a></li>
+          <li><a href="xe-dang-ban.html">Xe đang bán</a></li>
+          <li><a href="tra_cuu_xe.html">Tra cứu xe</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Liên hệ nhanh</p>
+        <ul class="footer-list">
+          <li><a href="tel:+84900000000">0900 000 000</a></li>
+          <li><a href="mailto:contact@xetaiduoi1tan.com">contact@xetaiduoi1tan.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="inner footer-legal">
+      <p>© <span id="y"></span> xetaiduoi1tan.com. Nội dung mang tính tham khảo; vui lòng đối chiếu văn bản pháp lý và quy định hiệu lực tại thời điểm sử dụng.</p>
+    </div>
+  </footer>
+  <script defer src="site.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('check-form');
+      const resultBox = document.getElementById('result-box');
+      const resultTitle = document.getElementById('result-title');
+      const resultMessage = document.getElementById('result-message');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const type = document.getElementById('vehicle-type').value;
+        const weight = parseInt(document.getElementById('vehicle-weight').value, 10);
+        
+        if (isNaN(weight) || weight <= 0) {
+          alert('Vui lòng nhập khối lượng hợp lệ.');
+          return;
+        }
+
+        resultBox.style.display = 'block';
+        resultBox.style.opacity = '0';
+        setTimeout(() => resultBox.style.opacity = '1', 10);
+        resultBox.style.transition = 'opacity 0.3s ease';
+
+        let isBanned = false;
+        let msg = '';
+
+        if (type === 'truck') {
+          if (weight >= 1000) {
+            isBanned = true;
+            msg = `Xe tải thùng có khối lượng chuyên chở <strong>${weight}kg</strong> (≥ 1000kg) sẽ <strong>bị cấm</strong> vào nội đô TP.HCM từ 6h-22h theo dự thảo mới.`;
+            resultBox.style.backgroundColor = '#fef2f2';
+            resultBox.style.borderColor = '#fca5a5';
+            resultTitle.style.color = '#b91c1c';
+          } else {
+            msg = `Xe tải thùng có khối lượng chuyên chở <strong>${weight}kg</strong> (< 1000kg) <strong>được phép</strong> lưu thông vào nội đô bình thường. Tuy nhiên cần chú ý các biển báo cấm tải trên từng tuyến đường cụ thể.`;
+            resultBox.style.backgroundColor = '#f0fdf4';
+            resultBox.style.borderColor = '#86efac';
+            resultTitle.style.color = '#15803d';
+          }
+        } else if (type === 'van' || type === 'pickup') {
+          if (weight >= 950) {
+            isBanned = true;
+            msg = `Xe Van/Bán tải có khối lượng chuyên chở <strong>${weight}kg</strong> (≥ 950kg) được xem như xe tải và sẽ <strong>bị cấm</strong> vào nội đô từ 6h-22h.`;
+            resultBox.style.backgroundColor = '#fef2f2';
+            resultBox.style.borderColor = '#fca5a5';
+            resultTitle.style.color = '#b91c1c';
+          } else {
+            msg = `Xe Van/Bán tải có khối lượng chuyên chở <strong>${weight}kg</strong> (< 950kg) được xem như xe con, <strong>được phép</strong> vào phố 24/24h.`;
+            resultBox.style.backgroundColor = '#f0fdf4';
+            resultBox.style.borderColor = '#86efac';
+            resultTitle.style.color = '#15803d';
+          }
+        }
+
+        resultMessage.innerHTML = msg;
+        resultTitle.innerText = isBanned ? '❌ Hạn chế lưu thông' : '✅ Được phép lưu thông';
+      });
+    });
+  </script>
+</body>
+</html>

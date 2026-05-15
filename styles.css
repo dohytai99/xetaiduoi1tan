@@ -798,6 +798,55 @@ table.compare-table {
 .compare-table td {
   border: 1px solid var(--line);
   padding: 0.6rem 0.75rem;
+}
+
+/* Animations & Mobile Optimizations */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card, .vehicle-card, .box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover, .vehicle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Better mobile inputs */
+input[type="number"], select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
   vertical-align: top;
   text-align: left;
 }
