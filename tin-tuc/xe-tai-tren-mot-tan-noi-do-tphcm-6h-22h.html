@@ -30,20 +30,27 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
   <header class="site-header">
-    <div class="inner site-header__row">
-      <a class="brand" href="../index.html">Xe tải <span>&lt; 1 tấn</span></a>
-      <nav class="nav" aria-label="Chính">
-        <a href="../index.html">Trang chủ</a>
-        <a href="xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html" aria-current="page">Tin TP.HCM</a>
-        <a href="../xe-dang-ban.html">Xe đang bán</a>
-        <a href="../lien-he.html">Liên hệ</a>
-      </nav>
+    <div class="inner site-header__inner">
+      <div class="brand-wrap">
+        <a class="brand" href="../index.html">Xe tải <span>&lt; 1 tấn</span></a>
+        <p class="brand-tag">Tin nội đô TP.HCM · xe đang bán · liên hệ</p>
+      </div>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel">Menu</button>
       <a class="btn btn--line btn--sm header-cta" href="tel:+84900000000">Gọi</a>
+      <div id="nav-panel" class="nav-panel">
+        <nav class="nav" aria-label="Chính">
+          <a href="../index.html">Trang chủ</a>
+          <a href="xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html" aria-current="page">Tin TP.HCM</a>
+          <a href="../xe-dang-ban.html">Xe đang bán</a>
+          <a href="../lien-he.html">Liên hệ</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main class="inner inner--narrow page-main">
+  <main id="main-content" class="inner inner--narrow page-main">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="../index.html">Trang chủ</a>
       <span aria-hidden="true"> / </span>
@@ -148,15 +155,34 @@
   </main>
 
   <footer class="site-footer">
-    <div class="inner footer-row">
-      <p>© <span id="y"></span> xetaiduoi1tan.com</p>
-      <nav class="footer-nav" aria-label="Chân trang">
-        <a href="../index.html">Trang chủ</a>
-        <a href="../xe-dang-ban.html">Xe</a>
-        <a href="../lien-he.html">Liên hệ</a>
-      </nav>
+    <div class="inner footer-grid">
+      <div>
+        <p class="footer-brand"><strong>xetaiduoi1tan.com</strong></p>
+        <p class="footer-desc">Thông tin về xe tải dưới 1 tấn và tin nội đô TP.HCM — tư liệu tham khảo, không phải tư vấn pháp lý.</p>
+      </div>
+      <div>
+        <p class="footer-title">Trang</p>
+        <ul class="footer-list">
+          <li><a href="../index.html">Trang chủ</a></li>
+          <li><a href="xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html">Tin TP.HCM</a></li>
+          <li><a href="gioi-han-xe-tai-noi-do-tphcm.html">Tóm tắt tin</a></li>
+          <li><a href="../xe-dang-ban.html">Xe đang bán</a></li>
+          <li><a href="../lien-he.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Liên hệ nhanh</p>
+        <ul class="footer-list">
+          <li><a href="tel:+84900000000">0900 000 000</a></li>
+          <li><a href="mailto:contact@xetaiduoi1tan.com">contact@xetaiduoi1tan.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="inner footer-legal">
+      <p>© <span id="y"></span> xetaiduoi1tan.com. Nội dung mang tính tham khảo; vui lòng đối chiếu văn bản pháp lý và quy định hiệu lực tại thời điểm sử dụng.</p>
     </div>
   </footer>
+  <script defer src="../site.js"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>

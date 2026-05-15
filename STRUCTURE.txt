@@ -1,0 +1,19 @@
+# Cấu trúc project xetaiduoi1tan (static)
+
+/
+├── index.html              # Landing / trang chủ
+├── xe-dang-ban.html        # Danh sách xe
+├── lien-he.html            # Liên hệ
+├── styles.css              # Style toàn site
+├── site.js                 # Menu mobile (toggle nav)
+├── favicon.svg
+├── vercel.json             # Redirect index.html → /
+├── robots.txt
+├── sitemap.xml
+├── tin-tuc/                # Bài tin / pillar SEO
+│   ├── xe-tai-tren-mot-tan-noi-do-tphcm-6h-22h.html
+│   └── gioi-han-xe-tai-noi-do-tphcm.html
+├── roadmap_implementation.md
+└── STRUCTURE.txt           # File này
+
+Ghi chú: Bài markdown trong roadmap (output/*.md) chưa có trong repo — sẽ gắn ở bước Ngày 7–10 khi convert sang HTML.
